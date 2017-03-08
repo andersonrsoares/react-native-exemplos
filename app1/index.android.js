@@ -4,28 +4,48 @@
  * @flow
  */
 
-var React = require('react');
-var Text  = require('react-native').Text;
-var AppRegistry = require('react-native').AppRegistry;
+//common js
+//var React = require('react');
+//destruct assingment exemplo(atribuicoes)
+//var {Text,View,Button,AppRegistry} =require('react-native');
 
-const App = function () {
+//import ecmascript
+
+import React from 'react';
+import {Text,View,Button,AppRegistry} from 'react-native';
+
+
+//arrow function
+const geraNumero = ()=> {
+     var num_aleatorio = Math.random();
+    num_aleatorio = Math.floor(num_aleatorio * 10);
+     alert(num_aleatorio);
+};
+
+const App =  ()=> {
      return (
-         <Text>Meu Primeiro APP</Text>
+          <View>
+               <Text>Gerador de NUmero APP</Text>
+               <Button
+                    title="Gerar numero randomico"
+                    onPress={geraNumero}
+               />
+          </View>
      )
 };
 
-AppRegistry.registerComponent('app1',function () {
+AppRegistry.registerComponent('app1',()=> {
      return App;
 });
 
 /*
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+ import React, { Component } from 'react';
+ import {
+ AppRegistry,
+ StyleSheet,
+ Text,
+ View
+ } from 'react-native';
 
 export default class app1 extends Component {
   render() {
