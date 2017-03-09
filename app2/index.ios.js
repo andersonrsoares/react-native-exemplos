@@ -83,7 +83,7 @@ const App =  ()=> {
     const {principal,botao,textoBotao} = Estilos;
     return (
         <View style={principal}>
-            <Image source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} style={{width:200, height:200}}/>
+            <Image  source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} style={{ width:200, height:200}}/>
             <Image source={require('./imgs/uvas.png')}/>
             <TouchableOpacity style={botao}>
                 <Text style={textoBotao}>Clique aqui</Text>
