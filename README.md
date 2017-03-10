@@ -8,3 +8,8 @@ instalacao Axis client HTTP<br/>
 npm install --save-dev babel-preset-es2015<br/>
 npm install --save-dev babel-preset-react<br/>
 npm install --save axios<br/>
+
+<br/>
+Router flux
+<br/>
+npm install --save react-native-router-flux<br/>
