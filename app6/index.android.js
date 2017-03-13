@@ -5,49 +5,24 @@
  */
 
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { AppRegistry} from 'react-native';
+import { Router,Scene} from 'react-native-router-flux';
+
+import Principal from './src/components/Principal';
+import SobreJogo from './src/components/SobreJogo';
+import OutrosJogos from './src/components/OutrosJogos';
+
 
 export default class app6 extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
+    render() {
+        return (
+           <Router sceneStyle={{paddingTop:50}}>
+             <Scene key='principal' component={Principal} initil title="Cara ou corroa"/>
+             <Scene key='sobrejogo' component={SobreJogo} title="Sobre o Jogo"/>
+             <Scene key='outrosjogos' component={OutrosJogos} title="Outros jogos"/>
+           </Router>
+        );
+    }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
 
 AppRegistry.registerComponent('app6', () => app6);
