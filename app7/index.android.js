@@ -4,6 +4,7 @@
  * @flow
  */
 
+
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -11,20 +12,30 @@ import {
   Text,
   View
 } from 'react-native';
+import  firebase from 'firebase';
+
+
 
 export default class app7 extends Component {
+
+
+    componentWillMount(){
+        //Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBLeHoukOL2lVMZwGHM3VL1ZTRho4JcLJw",
+            authDomain: "fir-react-ba886.firebaseapp.com",
+            databaseURL: "https://fir-react-ba886.firebaseio.com",
+            storageBucket: "fir-react-ba886.appspot.com",
+            messagingSenderId: "613681428871"
+        };
+        firebase.initializeApp(config);
+    }
+
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
           Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
         </Text>
       </View>
     );

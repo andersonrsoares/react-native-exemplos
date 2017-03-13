@@ -13,3 +13,8 @@ npm install --save axios<br/>
 Router flux
 <br/>
 npm install --save react-native-router-flux<br/>
+
+<br/>
+Firebase
+<br/>
+npm install --save firebase<br/>
